@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component ConCat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            background-color: rgb(150, 140, 215);
+            color: white;
+            align-items: center;
+            flex-direction: column;
+            height: 200vh;
+        }
+        header *{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            padding: 10px;
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: rgb(150, 140, 215);
+            justify-content: center;
+            background-color: black;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            width: 30vw;
+            padding: 5px;
+        }
+        #intro {
+
+            font-weight: bold;
+            color: yellow;
+            text-align: center;
+        }
+        #intro p {
+            padding: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Component ConCat
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="builder.html">Builder</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <p>
+                Welcome to Component ConCat! <br> Enjoy your stay.
+            </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWRI4zxEwZ3mbxthidm5hPsS6EXPFFXHykymtEmIVUFQ&s=10" height="200px">
+        </section>
+        <section></section>
+
+    </main>
+
+</body>
+</html>
