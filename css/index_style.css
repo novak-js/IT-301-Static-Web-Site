@@ -1,61 +1,117 @@
-section {
-    display: flex;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px;
-    background-color:  rgb(110, 100, 215);
-    border-radius: 10px;
-    width: 100%;
-    gap: 10px;
-}
+/* Homepage layout. Shared colors, fonts, and navigation are in univ_style.css. */
 main {
     width: 90%;
     max-width: 1000px;
+    margin: 16px auto 24px;
 }
-#intro p {
-    font-style: italic;
-    padding: 30px 20px;
+
+main section {
+    display: flex;
+    color: white;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: rgb(110, 100, 215);
+    border-radius: 5px;
+    width: 100%;
+    gap: 24px;
 }
+
+main h2 {
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+main p {
+    line-height: 1.6;
+}
+
+/* Keep the original welcome panel's divider and image on the right. */
 #intro h2 {
+    flex: 1;
+    margin-bottom: 0;
     border-right: solid 2px black;
-    padding: 30px 20px;
+    padding: 20px;
 }
+
+#intro p {
+    flex: 1;
+    font-style: italic;
+}
+
+#intro img {
+    display: block;
+    width: auto;
+    height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.page-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgb(150, 140, 215);
+    background-color: rgb(75, 60, 155);
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
     text-align: center;
     border: solid 3px black;
+    line-height: 1.4;
+    flex-shrink: 0;
 }
 
 .button-link:hover {
-    background-color: rgba(150, 140, 215, 0.5); /* Darkens on hover */
+    background-color: rgb(55, 40, 120);
 }
 
-/* Adjust layout for smaller screens */
+.button-link:focus-visible {
+    outline: 3px solid gold;
+    outline-offset: 4px;
+}
+
+/* Keep the homepage footer in normal flow instead of over the content. */
+footer {
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Media query: stack the panels and move the divider on smaller screens. */
 @media (max-width: 768px) {
-    #intro {
+    main section {
         flex-direction: column;
+        gap: 18px;
+        padding: 20px;
     }
+
     #intro h2 {
+        width: 100%;
         border-right: none;
         border-bottom: solid 2px black;
+        padding: 0 0 18px;
     }
-    #intro p {
-        padding: 15px;
+
+    .page-links {
+        width: 100%;
+        align-items: center;
     }
-    #intro img {
+
+    .button-link {
         max-width: 100%;
-    }
-    #build_expo {
-        flex-direction: column;
-        gap: 15px;
     }
 }
