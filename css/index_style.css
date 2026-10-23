@@ -1,0 +1,20 @@
+#intro {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:  rgb(110, 100, 215);
+    border-radius: 10px;
+    width: 800px;
+}
+#intro p {
+    font-style: italic;
+    padding: 30px 0px;
+}
+#intro h2 {
+    border-right: solid 2px black;
+    padding: 30px 0px;
+}
