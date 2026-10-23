@@ -80,17 +80,6 @@ main p {
     outline: 3px solid gold;
     outline-offset: 4px;
 }
-
-/* Keep the homepage footer in normal flow instead of over the content. */
-footer {
-    position: relative;
-    width: 100%;
-    margin-top: auto;
-    padding: 16px;
-    font-size: 0.875rem;
-    line-height: 1.5;
-}
-
 /* Media query: stack the panels and move the divider on smaller screens. */
 @media (max-width: 768px) {
     main section {

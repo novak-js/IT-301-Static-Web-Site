@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     background-color: rgb(150, 140, 215);
@@ -12,15 +13,18 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     min-height: 100vh;
 }
+
 header h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     font-family: monospace;
 }
+
 header h1 {
     padding: 10px;
 }
+
 nav {
     display: flex;
     width: 100%;
@@ -33,6 +37,7 @@ nav {
     justify-content: center;
     background-color: black;
 }
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -41,21 +46,21 @@ nav ul {
     padding: 5px;
     flex-wrap: wrap;
 }
+
 nav ul li a{
     color: gold;
     text-decoration: none;
 }
+    /* Keep the homepage footer in normal flow instead of over the content. */
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    size: 5px;
-    width: 100vw;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px;
+    font-size: 0.875rem;
+    line-height: 1.5;
     background-color: black;
-
 }
-
 /* media query */
 @media (max-width: 768px) {
 
