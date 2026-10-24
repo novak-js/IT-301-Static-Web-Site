@@ -55,6 +55,15 @@ main a:hover {
     color: gold;
 }
 
+section ul {
+    padding-left: 15px;
+    margin-bottom: 12px;
+}
+
+#thanks_jenson {
+    color: red;
+    font-weight: bold;
+}
 /* Media query: put component headings above the text on small screens. */
 @media (max-width: 768px) {
     .component {
