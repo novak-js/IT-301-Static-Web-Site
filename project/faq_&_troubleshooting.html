@@ -6,6 +6,7 @@
     <title>FAQ & Troubleshooting | Component ConCat</title>
     <link rel="stylesheet" href="css/univ_style.css">
     <link rel="stylesheet" href="css/faq_&_troubleshooting_style.css">
+    <script src="js/feedback.js" defer></script>
 </head>
 <body>
     <!-- Shared site header and navigation. -->
@@ -24,10 +25,10 @@
 
     <main>
         <!-- Topic links jump to each group of questions. -->
-        <section id="intro">
+        <section class="panel intro" id="intro">
             <h2>A little help for your next build</h2>
             <p>Choose a topic, then open a question to read the answer.</p>
-            <div id="topics">
+            <div class="topic-links" id="topics">
                 <a href="#before_building">Before building</a>
                 <a href="#assembly">During assembly</a>
                 <a href="#troubleshooting">Troubleshooting</a>
@@ -35,7 +36,7 @@
         </section>
 
         <!-- Native details elements expand without JavaScript. -->
-        <section id="before_building">
+        <section class="panel" id="before_building">
             <h2>Before building</h2>
             <details open>
                 <summary>How do I know if my parts will work together?</summary>
@@ -51,7 +52,7 @@
             </details>
         </section>
 
-        <section id="assembly">
+        <section class="panel" id="assembly">
             <h2>During assembly</h2>
             <details>
                 <summary>Which slots should I use for RAM?</summary>
@@ -67,7 +68,7 @@
             </details>
         </section>
 
-        <section id="troubleshooting">
+        <section class="panel" id="troubleshooting">
             <h2>Troubleshooting</h2>
             <p>Before reseating parts or changing internal connections, shut down the PC, switch off the PSU, and unplug it.</p>
             <details open>
@@ -96,10 +97,33 @@
             </details>
         </section>
 
-        <section id="more_help">
+        <section class="panel" id="more_help">
             <h2>Still need a hand?</h2>
             <p>Revisit the <a href="guides.html">building guide</a> or consult the manual for your exact component.</p>
             <p>For more detailed startup checks, see <a href="https://rog.asus.com/support/faq/1042632/">ASUS startup troubleshooting</a> and <a href="https://www.amd.com/en/resources/support-articles/faqs/PIBRMATS1.html">AMD boot troubleshooting</a>. Contact the component manufacturer if the problem continues.</p>
+        </section>
+
+        <!-- Native required and email checks run before the local confirmation. -->
+        <section class="panel" id="feedback">
+            <h2>Try the feedback form</h2>
+            <p>What helped you, and what would you like to learn next?</p>
+            <p>This is a practice form. Your entries stay on this page and are not sent or saved. All fields are required.</p>
+            <form id="feedback_form">
+                <div class="form-field">
+                    <label for="feedback_name">Name</label>
+                    <input type="text" id="feedback_name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="feedback_email">Email</label>
+                    <input type="email" id="feedback_email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="feedback_message">Feedback</label>
+                    <textarea id="feedback_message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Check feedback</button>
+                <output id="feedback_status" for="feedback_name feedback_email feedback_message"></output>
+            </form>
         </section>
     </main>
 
