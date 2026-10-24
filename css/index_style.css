@@ -43,7 +43,14 @@ main p {
     font-style: italic;
 }
 
-#intro img {
+#intro figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#intro figure img {
     display: block;
     width: auto;
     height: 150px;
