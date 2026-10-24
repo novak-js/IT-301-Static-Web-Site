@@ -1,0 +1,80 @@
+/* FAQ & troubleshooting layout. Shared colors, fonts, and navigation are in univ_style.css. */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 16px auto 24px;
+}
+
+main section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(110, 100, 215);
+    border-radius: 10px;
+    scroll-margin-top: 90px;
+}
+
+main h2 {
+    font-family: monospace;
+    margin-bottom: 12px;
+}
+
+main p,
+main li {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+#intro {
+    text-align: center;
+}
+
+#topics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+details {
+    border-top: solid 1px black;
+    padding: 10px 0;
+}
+
+summary {
+    padding: 8px;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+details p, details ol {
+    margin-top: 12px;
+}
+
+details ol {
+    padding-left: 28px;
+}
+
+main a {
+    color: white;
+}
+
+main a:hover {
+    color: gold;
+}
+
+/* Media query: stack topic links and reduce padding on small screens. */
+@media (max-width: 768px) {
+    main section {
+        padding: 16px;
+    }
+
+    #topics {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
