@@ -73,14 +73,6 @@ main a:hover {
 span {
     font-weight: bold;
 }
-
-/* Aligns the center of the image with the center of the text */
-img {
-    height: 1.5em;       
-    width: auto;         
-    vertical-align: middle; 
-}
-
 /* Media query: put the contents above the guide on smaller screens. */
 @media (max-width: 768px) {
     #guide_layout {
