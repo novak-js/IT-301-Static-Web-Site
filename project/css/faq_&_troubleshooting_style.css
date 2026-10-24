@@ -26,23 +26,18 @@ details ol {
 form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     max-width: 600px;
-}
-
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
 }
 
 label {
     font-weight: bold;
+    margin-bottom: 6px;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
+    margin-bottom: 16px;
     border: solid 2px black;
     border-radius: 5px;
     font: inherit;
@@ -60,9 +55,8 @@ button {
     align-self: flex-start;
 }
 
-#feedback_status {
-    display: block;
-    line-height: 1.6;
+#greeting {
+    margin-top: 16px;
 }
 
 /* Media query: stack topic links and reduce panel padding on small screens. */
