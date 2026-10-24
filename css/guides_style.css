@@ -1,0 +1,94 @@
+/* Guides layout. Shared colors, fonts, and navigation are in univ_style.css. */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 16px auto 24px;
+}
+
+#intro,
+#contents,
+#building_guide {
+    padding: 20px;
+    background-color: rgb(110, 100, 215);
+    border-radius: 10px;
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h2,
+main h3 {
+    font-family: monospace;
+    margin-bottom: 12px;
+}
+
+main p,
+main li {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+main ul,
+main ol {
+    padding-left: 20px;
+}
+
+#guide_layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#contents {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+#building_guide {
+    flex: 1;
+    min-width: 0;
+}
+
+.guide_step {
+    border-top: solid 1px black;
+    padding-top: 20px;
+    margin-top: 20px;
+    scroll-margin-top: 90px;
+}
+
+main a {
+    color: white;
+}
+
+main a:hover {
+    color: gold;
+}
+
+#note {
+    font-style: italic;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* Aligns the center of the image with the center of the text */
+img {
+    height: 1.5em;       
+    width: auto;         
+    vertical-align: middle; 
+}
+
+/* Media query: put the contents above the guide on smaller screens. */
+@media (max-width: 768px) {
+    #guide_layout {
+        flex-direction: column;
+    }
+
+    #contents,
+    #building_guide {
+        width: 100%;
+    }
+}
