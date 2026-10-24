@@ -1,0 +1,71 @@
+/* Components layout. Shared colors, fonts, and navigation are in univ_style.css. */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 16px auto 24px;
+}
+
+main section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(110, 100, 215);
+    border-radius: 10px;
+}
+
+main h2 {
+    font-family: monospace;
+    margin-bottom: 12px;
+}
+
+main p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+#intro {
+    text-align: center;
+}
+
+#part_links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.component {
+    display: flex;
+    gap: 20px;
+    scroll-margin-top: 90px;
+}
+
+.component h2 {
+    width: 220px;
+    flex-shrink: 0;
+    padding-right: 20px;
+    margin-bottom: 0;
+    border-right: solid 2px black;
+}
+
+main a {
+    color: white;
+}
+
+main a:hover {
+    color: gold;
+}
+
+/* Media query: put component headings above the text on small screens. */
+@media (max-width: 768px) {
+    .component {
+        flex-direction: column;
+    }
+
+    .component h2 {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 12px;
+        border-right: none;
+        border-bottom: solid 2px black;
+    }
+}
